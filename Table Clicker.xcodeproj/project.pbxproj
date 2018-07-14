@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		AF1294E720F988F10045C0C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1294E620F988F10045C0C9 /* AppDelegate.swift */; };
-		AF1294E920F988F10045C0C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1294E820F988F10045C0C9 /* ViewController.swift */; };
+		AF1294E920F988F10045C0C9 /* ClickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1294E820F988F10045C0C9 /* ClickerViewController.swift */; };
 		AF1294EC20F988F10045C0C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF1294EA20F988F10045C0C9 /* Main.storyboard */; };
 		AF1294EE20F988F20045C0C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF1294ED20F988F20045C0C9 /* Assets.xcassets */; };
 		AF1294F120F988F20045C0C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF1294EF20F988F20045C0C9 /* LaunchScreen.storyboard */; };
+		AF1294F920F98AC90045C0C9 /* ScoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1294F820F98AC90045C0C9 /* ScoreTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AF1294E320F988F10045C0C9 /* Table Clicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Table Clicker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF1294E620F988F10045C0C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AF1294E820F988F10045C0C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AF1294E820F988F10045C0C9 /* ClickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickerViewController.swift; sourceTree = "<group>"; };
 		AF1294EB20F988F10045C0C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF1294ED20F988F20045C0C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF1294F020F988F20045C0C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF1294F220F988F20045C0C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF1294F820F98AC90045C0C9 /* ScoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +57,9 @@
 			isa = PBXGroup;
 			children = (
 				AF1294E620F988F10045C0C9 /* AppDelegate.swift */,
-				AF1294E820F988F10045C0C9 /* ViewController.swift */,
+				AF1294E820F988F10045C0C9 /* ClickerViewController.swift */,
 				AF1294EA20F988F10045C0C9 /* Main.storyboard */,
+				AF1294F820F98AC90045C0C9 /* ScoreTableViewController.swift */,
 				AF1294ED20F988F20045C0C9 /* Assets.xcassets */,
 				AF1294EF20F988F20045C0C9 /* LaunchScreen.storyboard */,
 				AF1294F220F988F20045C0C9 /* Info.plist */,
@@ -135,8 +138,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF1294E920F988F10045C0C9 /* ViewController.swift in Sources */,
+				AF1294E920F988F10045C0C9 /* ClickerViewController.swift in Sources */,
 				AF1294E720F988F10045C0C9 /* AppDelegate.swift in Sources */,
+				AF1294F920F98AC90045C0C9 /* ScoreTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,8 +285,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PQ6U5ESLN2;
+				DEVELOPMENT_TEAM = 2XU3BMKNS4;
 				INFOPLIST_FILE = "Table Clicker/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,8 +304,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PQ6U5ESLN2;
+				DEVELOPMENT_TEAM = 2XU3BMKNS4;
 				INFOPLIST_FILE = "Table Clicker/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
