@@ -75,6 +75,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Scores" id="VON-x9-JxX">
+                        <barButtonItem key="leftBarButtonItem" title="Clear" id="wzO-Ny-Rk1">
+                            <connections>
+                                <action selector="clearButton:" destination="Ivs-vz-kac" id="UKh-Yx-yR6"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="play" id="bTE-NP-bTn">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="presentation" id="mad-yE-b7z"/>

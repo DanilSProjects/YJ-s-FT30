@@ -37,7 +37,10 @@ class ClickerViewController: UIViewController {
         label.text = "\(counter)"
         
         if counter == 30 {
-            print("Time is \(time)")
+           UIView.animate(withDuration: 0.1, animations: {
+            self.view.backgroundColor = .cyan
+            self.label.text = "DONE!"
+           })
             performSegue(withIdentifier: "exitClicker", sender: self)
         }
     }
