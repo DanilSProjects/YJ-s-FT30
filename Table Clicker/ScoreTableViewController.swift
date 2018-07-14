@@ -59,7 +59,7 @@ class ScoreTableViewController: UITableViewController {
     @IBAction func unwindToScoreTable(segue: UIStoryboardSegue) {
         if segue.identifier == "exitClicker" {
             let source = segue.source as! ClickerViewController
-            scores.append(source.time - 0.1)
+            scores.insert((source.time - 1), at: 0)
             tableView.reloadData()
             UserDefaults.standard.set(scores, forKey: SAVED_SCORES_KEY)
         }
