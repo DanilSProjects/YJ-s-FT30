@@ -19,13 +19,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kj2-4A-e6Y">
-                                <rect key="frame" x="157" y="274" width="61" height="119"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="99"/>
+                                <rect key="frame" x="162.5" y="283.5" width="51" height="101"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="84"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="READY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3P-sz-0R1">
+                                <rect key="frame" x="60" y="284" width="256" height="101"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="84"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.76639055284895552" blue="0.28788908462060869" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.55678645091004431" green="1" blue="0.25320268816178648" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Kj2-4A-e6Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="keK-Lp-AR7"/>
@@ -37,6 +44,7 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="goLabel" destination="e3P-sz-0R1" id="h0d-Vb-P2d"/>
                         <outlet property="label" destination="Kj2-4A-e6Y" id="Hz7-Qb-LYZ"/>
                         <segue destination="M1M-zU-zl8" kind="unwind" identifier="exitClicker" unwindAction="unwindToScoreTableWithSegue:" id="sFq-cw-KPE"/>
                     </connections>

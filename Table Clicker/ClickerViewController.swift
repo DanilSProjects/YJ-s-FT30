@@ -10,20 +10,60 @@ import UIKit
 
 class ClickerViewController: UIViewController {
 
+    @IBOutlet var goLabel: UILabel!
     @IBOutlet weak var label: UILabel!
     var counter = 0
     var time: Float = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (_) in
-            self.time += 0.1
-        }
-        
+        label.isHidden = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
-
+        UIView.animate(withDuration: 1.5, animations: {
+            self.goLabel.text = "READY"
+            let scaleTrans = CGAffineTransform(scaleX: 0.2, y: 0.2)
+            self.goLabel.transform = scaleTrans
+            self.goLabel.alpha = 0
+        }) { (_) in
+            UIView.animate(withDuration: 0.01, animations: {
+                self.goLabel.transform = CGAffineTransform.identity
+                self.goLabel.alpha = 1
+                self.goLabel.text = "SET"
+                self.view.backgroundColor = .red
+            }) {(_) in
+                UIView.animate(withDuration: 1.5, animations: {
+                    self.goLabel.text = "SET"
+                    let scaleTrans = CGAffineTransform(scaleX: 0.2, y: 0.2)
+                    self.goLabel.transform = scaleTrans
+                    self.goLabel.alpha = 0
+                    
+                }) {(_) in
+                    UIView.animate(withDuration: 0.01, animations: {
+                        self.goLabel.transform = CGAffineTransform.identity
+                        self.goLabel.alpha = 1
+                        self.goLabel.text = "GO!"
+                        self.view.backgroundColor = .orange
+                    }) {(_) in
+                        UIView.animate(withDuration: 1.5, animations: {
+                            self.goLabel.text = "GO!"
+                            let scaleTrans = CGAffineTransform(scaleX: 2, y: 2)
+                            self.goLabel.transform = scaleTrans
+                            self.goLabel.alpha = 0
+                        }) {(_) in
+                            self.goLabel.isHidden = true
+                            self.label.isHidden = false
+                            self.label.text = "0"
+                            Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (_) in
+                                self.time += 0.1
+                            }
+                            
+                        }
+    }
+    }
+    }
+    }
     }
     
 
