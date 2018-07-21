@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ksz-pm-iYL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T1s-ft-3iL">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Clicker View Controller-->
+        <!--Play-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ClickerViewController" customModule="Table_Clicker" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,7 +32,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.55678645091004431" green="1" blue="0.25320268816178648" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.084040851152848539" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Kj2-4A-e6Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="keK-Lp-AR7"/>
@@ -43,6 +43,7 @@
                             <outletCollection property="gestureRecognizers" destination="dUp-Nw-HbC" appends="YES" id="1vW-t5-oxS"/>
                         </connections>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Play" image="play-button" selectedImage="play-button" id="rIN-9Y-ePb"/>
                     <connections>
                         <outlet property="goLabel" destination="e3P-sz-0R1" id="h0d-Vb-P2d"/>
                         <outlet property="label" destination="Kj2-4A-e6Y" id="Hz7-Qb-LYZ"/>
@@ -57,7 +58,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="775" y="116"/>
+            <point key="canvasLocation" x="-121" y="977"/>
         </scene>
         <!--Scores-->
         <scene sceneID="XcS-YK-Koq">
@@ -97,12 +98,13 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bwe-Vk-f9T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-178" y="116"/>
+            <point key="canvasLocation" x="760.79999999999995" y="115.59220389805098"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Scores-->
         <scene sceneID="AZa-tI-uC8">
             <objects>
                 <navigationController id="ksz-pm-iYL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Scores" image="list" selectedImage="list" id="H5l-O6-hNf"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0vj-rO-XB2">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -113,7 +115,32 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wee-cc-Rjy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1060" y="116"/>
+            <point key="canvasLocation" x="-120.8" y="115.59220389805098"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="5Sw-ab-64T">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="T1s-ft-3iL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QHz-HX-oCH">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ksz-pm-iYL" kind="relationship" relationship="viewControllers" id="tho-FS-fCC"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="tvd-zh-0Br"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q1o-pR-DBP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1060" y="115.59220389805098"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="list" width="24" height="24"/>
+        <image name="play-button" width="24" height="24"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="tvd-zh-0Br"/>
+    </inferredMetricsTieBreakers>
 </document>

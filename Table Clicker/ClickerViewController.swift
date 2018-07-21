@@ -31,7 +31,7 @@ class ClickerViewController: UIViewController {
                 self.goLabel.transform = CGAffineTransform.identity
                 self.goLabel.alpha = 1
                 self.goLabel.text = "SET"
-                self.view.backgroundColor = .red
+                self.view.backgroundColor = .yellow
             }) {(_) in
                 UIView.animate(withDuration: 1.5, animations: {
                     self.goLabel.text = "SET"
@@ -44,7 +44,7 @@ class ClickerViewController: UIViewController {
                         self.goLabel.transform = CGAffineTransform.identity
                         self.goLabel.alpha = 1
                         self.goLabel.text = "GO!"
-                        self.view.backgroundColor = .orange
+                        self.view.backgroundColor = .green
                     }) {(_) in
                         UIView.animate(withDuration: 1.5, animations: {
                             self.goLabel.text = "GO!"
