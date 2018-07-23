@@ -43,52 +43,48 @@ class ClickerViewController: UIViewController {
         counter = 0
         time = 0
         startButton.isHidden = true
-        UIView.animate(withDuration: 1.5, animations: {
+        let animator = UIViewPropertyAnimator(duration: 1.5, curve: .linear, animations: {
             self.goLabel.text = "READY"
-            let scaleTrans = CGAffineTransform(scaleX: 0.2, y: 0.2)
-            self.goLabel.transform = scaleTrans
+            self.view.backgroundColor = .red
+            self.goLabel.transform = CGAffineTransform(scaleX: 0.2, y: 0.2)
             self.goLabel.alpha = 0
-        }) { (_) in
-            UIView.animate(withDuration: 0.01, animations: {
+        })
+        animator.addCompletion{(_) in
+            self.goLabel.transform = CGAffineTransform.identity
+            self.goLabel.alpha = 1
+            self.goLabel.text = "SET"
+            self.view.backgroundColor = .yellow
+            let secondAnimator = UIViewPropertyAnimator(duration: 1.5, curve: .linear, animations : {
+                self.goLabel.transform = CGAffineTransform(scaleX: 0.2, y: 0.2)
+                self.goLabel.alpha = 0
+                
+            })
+            secondAnimator.addCompletion{(_) in
                 self.goLabel.transform = CGAffineTransform.identity
                 self.goLabel.alpha = 1
-                self.goLabel.text = "SET"
-                self.view.backgroundColor = .yellow
-            }) {(_) in
-                UIView.animate(withDuration: 1.5, animations: {
-                    self.goLabel.text = "SET"
-                    let scaleTrans = CGAffineTransform(scaleX: 0.2, y: 0.2)
-                    self.goLabel.transform = scaleTrans
+                self.goLabel.text = "GO!"
+                self.view.backgroundColor = .green
+                let thirdAnimator = UIViewPropertyAnimator(duration: 1.5, curve: .linear, animations : {
+                    self.goLabel.transform = CGAffineTransform(scaleX: 2, y: 2)
                     self.goLabel.alpha = 0
                     
-                }) {(_) in
-                    UIView.animate(withDuration: 0.01, animations: {
-                        self.goLabel.transform = CGAffineTransform.identity
-                        self.goLabel.alpha = 1
-                        self.goLabel.text = "GO!"
-                        self.view.backgroundColor = .green
-                    }) {(_) in
-                        UIView.animate(withDuration: 1.5, animations: {
-                            self.goLabel.text = "GO!"
-                            let scaleTrans = CGAffineTransform(scaleX: 2, y: 2)
-                            self.goLabel.transform = scaleTrans
-                            self.goLabel.alpha = 0
-                        }) {(_) in
-                            self.goLabel.alpha = 1
-                            self.goLabel.transform = CGAffineTransform.identity
-                            self.goLabel.isHidden = true
-                            self.label.isHidden = false
-                            self.label.text = "0"
-                            self.timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (_) in
-                                self.time += 0.1
-                                print (self.time)
-                            }
-                            
-                        }
+                })
+                thirdAnimator.addCompletion{(_) in
+                    self.goLabel.alpha = 1
+                    self.goLabel.transform = CGAffineTransform.identity
+                    self.goLabel.isHidden = true
+                    self.label.isHidden = false
+                    self.label.text = "0"
+                    self.timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (_) in
+                        self.time += 0.1
                     }
                 }
+                thirdAnimator.startAnimation()
             }
+            secondAnimator.startAnimation()
         }
+        
+        animator.startAnimation()
     }
     
     override func didReceiveMemoryWarning() {
