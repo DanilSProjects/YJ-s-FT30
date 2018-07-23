@@ -30,8 +30,10 @@ class ScoreTableViewController: UITableViewController {
     }
     @IBAction func clearButton(_ sender: UIBarButtonItem) {
         scores.removeAll()
+        UserDefaults.standard.set(scores, forKey: SAVED_SCORES_KEY)
         tableView.reloadData()
     }
+    
     
     // MARK: - Table view data source
 
@@ -59,7 +61,7 @@ class ScoreTableViewController: UITableViewController {
     @IBAction func unwindToScoreTable(segue: UIStoryboardSegue) {
         if segue.identifier == "exitClicker" {
             let source = segue.source as! ClickerViewController
-            scores.insert((source.time - 1), at: 0)
+            scores.insert((source.time), at: 0)
             tableView.reloadData()
             UserDefaults.standard.set(scores, forKey: SAVED_SCORES_KEY)
         }

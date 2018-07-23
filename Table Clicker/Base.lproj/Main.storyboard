@@ -24,13 +24,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="READY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3P-sz-0R1">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="READY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="e3P-sz-0R1">
                                 <rect key="frame" x="60" y="284" width="256" height="101"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="84"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bk-Sp-rtn">
+                                <rect key="frame" x="60" y="238" width="256" height="179"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.16614978865170471" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
+                                <state key="normal" title="CLICK HERE TO START">
+                                    <color key="titleColor" red="0.97483748948350668" green="1" blue="0.77370299977470947" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HuI-rp-Uh1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.084040851152848539" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
@@ -47,6 +59,7 @@
                     <connections>
                         <outlet property="goLabel" destination="e3P-sz-0R1" id="h0d-Vb-P2d"/>
                         <outlet property="label" destination="Kj2-4A-e6Y" id="Hz7-Qb-LYZ"/>
+                        <outlet property="startButton" destination="5bk-Sp-rtn" id="mLE-lT-msB"/>
                         <segue destination="M1M-zU-zl8" kind="unwind" identifier="exitClicker" unwindAction="unwindToScoreTableWithSegue:" id="sFq-cw-KPE"/>
                     </connections>
                 </viewController>
@@ -58,7 +71,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-121" y="977"/>
+            <point key="canvasLocation" x="-122.40000000000001" y="976.46176911544239"/>
         </scene>
         <!--Scores-->
         <scene sceneID="XcS-YK-Koq">
@@ -87,11 +100,6 @@
                         <barButtonItem key="leftBarButtonItem" title="Clear" id="wzO-Ny-Rk1">
                             <connections>
                                 <action selector="clearButton:" destination="Ivs-vz-kac" id="UKh-Yx-yR6"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="bTE-NP-bTn">
-                            <connections>
-                                <segue destination="BYZ-38-t0r" kind="presentation" id="mad-yE-b7z"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -123,6 +131,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="T1s-ft-3iL" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QHz-HX-oCH">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -140,7 +149,4 @@
         <image name="list" width="24" height="24"/>
         <image name="play-button" width="24" height="24"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="tvd-zh-0Br"/>
-    </inferredMetricsTieBreakers>
 </document>
