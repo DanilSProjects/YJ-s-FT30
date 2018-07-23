@@ -33,8 +33,9 @@ class ClickerViewController: UIViewController {
         view.backgroundColor = .red
         counter = 0
         time = 0
+        timer?.invalidate()
         startButton.isHidden = false
- 
+
     }
     
     
@@ -43,6 +44,7 @@ class ClickerViewController: UIViewController {
         counter = 0
         time = 0
         startButton.isHidden = true
+    // Ready set go
         let animator = UIViewPropertyAnimator(duration: 1.5, curve: .linear, animations: {
             self.goLabel.text = "READY"
             self.view.backgroundColor = .red
@@ -97,14 +99,20 @@ class ClickerViewController: UIViewController {
         label.text = "\(counter)"
         
         if counter == 30 {
-           UIView.animate(withDuration: 1, animations: {
+           UIView.animate(withDuration: 0.5, animations: {
             self.timer?.invalidate()
             self.view.backgroundColor = .cyan
             self.label.text = "\(self.time)"
+            // Label goes up
             let labelTransform = CGAffineTransform(scaleX: 1.3, y: 1.3)
             self.label.transform = labelTransform
            }) { (_) in
+            UIView.animate(withDuration: 0.5, animations: {
+                // Label goes back down
+                self.label.transform = CGAffineTransform.identity
+            }) {(_) in
             self.performSegue(withIdentifier: "exitClicker", sender: self)
+            }
         }
         }
     }
