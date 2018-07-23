@@ -16,6 +16,7 @@ class ClickerViewController: UIViewController {
     var counter = 0
     var time: Float = 0
     var timer: Timer?
+    var isAnimationOver = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +36,7 @@ class ClickerViewController: UIViewController {
         time = 0
         timer?.invalidate()
         startButton.isHidden = false
-
+        isAnimationOver = false
     }
     
     
@@ -77,6 +78,7 @@ class ClickerViewController: UIViewController {
                     self.goLabel.isHidden = true
                     self.label.isHidden = false
                     self.label.text = "0"
+                    self.isAnimationOver = true
                     self.timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (_) in
                         self.time += 0.1
                     }
@@ -95,8 +97,12 @@ class ClickerViewController: UIViewController {
     }
 
     @IBAction func tapped(_ sender: Any) {
+        if isAnimationOver == true {
         counter += 1
         label.text = "\(counter)"
+        } else if isAnimationOver == false {
+            print ("Sorry sir, restricted area.")
+        }
         
         if counter == 30 {
            UIView.animate(withDuration: 0.5, animations: {
