@@ -17,6 +17,7 @@ class ClickerViewController: UIViewController {
     var time: Float = 0
     var timer: Timer?
     var isAnimationOver = false
+    var timeCompleted: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -117,6 +118,7 @@ class ClickerViewController: UIViewController {
                 // Label goes back down
                 self.label.transform = CGAffineTransform.identity
             }) {(_) in
+            self.timeCompleted = DateFormatter.localizedString(from: NSDate() as Date, dateStyle: DateFormatter.Style.medium, timeStyle: DateFormatter.Style.short)
             self.performSegue(withIdentifier: "exitClicker", sender: self)
             }
         }

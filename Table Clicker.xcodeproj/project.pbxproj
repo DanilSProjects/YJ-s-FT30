@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65BB0D9D210614DF00A55085 /* ScoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BB0D9C210614DF00A55085 /* ScoreTableViewCell.swift */; };
 		AF1294E720F988F10045C0C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1294E620F988F10045C0C9 /* AppDelegate.swift */; };
 		AF1294E920F988F10045C0C9 /* ClickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1294E820F988F10045C0C9 /* ClickerViewController.swift */; };
 		AF1294EC20F988F10045C0C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF1294EA20F988F10045C0C9 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		65BB0D9C210614DF00A55085 /* ScoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreTableViewCell.swift; sourceTree = "<group>"; };
 		AF1294E320F988F10045C0C9 /* Table Clicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Table Clicker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF1294E620F988F10045C0C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF1294E820F988F10045C0C9 /* ClickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickerViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				AF1294E620F988F10045C0C9 /* AppDelegate.swift */,
 				AF1294E820F988F10045C0C9 /* ClickerViewController.swift */,
+				65BB0D9C210614DF00A55085 /* ScoreTableViewCell.swift */,
 				AF1294EA20F988F10045C0C9 /* Main.storyboard */,
 				AF1294F820F98AC90045C0C9 /* ScoreTableViewController.swift */,
 				AF1294ED20F988F20045C0C9 /* Assets.xcassets */,
@@ -140,6 +143,7 @@
 			files = (
 				AF1294E920F988F10045C0C9 /* ClickerViewController.swift in Sources */,
 				AF1294E720F988F10045C0C9 /* AppDelegate.swift in Sources */,
+				65BB0D9D210614DF00A55085 /* ScoreTableViewCell.swift in Sources */,
 				AF1294F920F98AC90045C0C9 /* ScoreTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
